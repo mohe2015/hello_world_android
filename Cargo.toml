@@ -10,7 +10,7 @@ crate-type = ["lib", "cdylib"]
 
 [dependencies]
 glutin = "0.29"
-gl = "0.14.0"
+gl = "0.14"
 skia-safe = { version = "0.53", features = ["gl"] }
 
 # This dependency will only be included when targeting Android
@@ -20,3 +20,6 @@ ndk-glue = "0.7"
 [package.metadata.android.signing.release]
 path = "/home/moritz/.android/debug.keystore"
 keystore_password = "android"
+
+[package.metadata.android.application]
+debuggable = true

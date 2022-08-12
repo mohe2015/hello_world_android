@@ -8,7 +8,7 @@ mod renderer;
 
 // https://github.com/rust-windowing/android-ndk-rs/issues/117
 
-#[cfg_attr(target_os = "android", ndk_glue::main(backtrace = "on"))]
+#[cfg_attr(target_os = "android", ndk_glue::main(backtrace = "full"))]
 pub fn main() {
     use gl::types::GLint;
     use glutin::{
@@ -120,7 +120,7 @@ pub fn main() {
 
         #[allow(deprecated)]
         match event {
-            // https://github.com/rib/android-activity/blob/main/examples/agdk-egui/src/lib.rs
+           /*  // https://github.com/rib/android-activity/blob/main/examples/agdk-egui/src/lib.rs
             Event::Resumed => match window {
                 None => {
                     window = Some(create_window(event_loop, &mut state, &mut painter));
@@ -134,7 +134,7 @@ pub fn main() {
             #[cfg(target_os = "android")]
             Suspended => {
                 window = None;
-            }
+            }*/
             Event::LoopDestroyed => {}
             Event::WindowEvent { event, .. } => match event {
                 WindowEvent::Resized(physical_size) => {
