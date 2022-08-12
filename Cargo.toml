@@ -23,3 +23,10 @@ keystore_password = "android"
 
 [package.metadata.android.application]
 debuggable = true
+# https://github.com/rust-windowing/android-ndk-rs/blob/dc38fcbf688a0a0e7a378a18f7b2cf4c095ccf92/ndk-build/src/manifest.rs#L66
+extractNativeLibs = true
+
+[package.metadata.android.sdk]
+#min_sdk_version = 21
+#target_sdk_version = 21
+#max_sdk_version = 29
